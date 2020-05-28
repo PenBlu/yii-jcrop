@@ -48,4 +48,3 @@
 <input type="hidden" id="y-jcrop" name="y-jcrop" />
 <input type="hidden" id="w-jcrop" name="w-jcrop" />
 <input type="hidden" id="h-jcrop" name="h-jcrop" />
-<input type="button" class="btn btn-default" value="test" onclick="saveCropImage()" />
