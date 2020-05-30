@@ -25,6 +25,7 @@ class JCrop extends \yii\base\Widget
     public $selectBoxPosW = "0"; // Ancho o posicion desde el punto x,y
     public $selectBoxPosH = "0"; // Altura o posicion desde el punto x,y
     public $callBackFn = "";
+    public $showFnSelect = false; // Muestra una funcion que muestra el cuadro seleccionado
 
     public function init() {
         parent::init();
@@ -79,6 +80,16 @@ class JCrop extends \yii\base\Widget
             objCropImg.w = $('#w-jcrop').val();
             objCropImg.h = $('#h-jcrop').val();
             return objCropImg;
+        }
+        function setSelect(){
+            let current = selectCoords();
+            let arrPoints = [
+                parseInt(current.x), 
+                parseInt(current.y), 
+                parseInt(current.x) + parseInt(current.w), 
+                parseInt(current.y) + parseInt(current.h)
+            ];
+            jcrop_api.setSelect(arrPoints);
         }
         $callBackFn
         ";
