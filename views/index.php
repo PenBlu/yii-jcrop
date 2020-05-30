@@ -44,6 +44,13 @@
  */
 ?>
 <img src="<?= $url ?>" id='<?= $htmlOptions['id'] ?>' alt="photo Image" />
+<?php if($showFnSelect): ?>
+<div style="text-align: center; margin: .8em 0 .5em;">
+    <span class="requiresjcrop">
+        <button id="setSelect" class="btn bg-olive" onclick="setSelect()"><i class="glyphicon glyphicon-refresh"></i></button>
+    </span>
+</div>
+<?php endif; ?>
 <input type="hidden" id="x-jcrop" name="x-jcrop" />
 <input type="hidden" id="y-jcrop" name="y-jcrop" />
 <input type="hidden" id="w-jcrop" name="w-jcrop" />
